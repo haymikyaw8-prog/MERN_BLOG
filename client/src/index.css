@@ -1,0 +1,106 @@
+
+@import "tailwindcss";
+
+
+:root {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #252a27;
+  background: #f5f3ed;
+
+  --bg: #f5f3ed;
+  --surface: #ffffff;
+  --text: #252a27;
+  --muted: #777e78;
+  --primary: #20352f;
+  --accent: #8fa995;
+  --border: #e8e8df;
+}
+
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--primary);
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+  }
+
+  input,
+  textarea,
+  select {
+    max-width: 100%;
+    color: var(--text);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #a0a59f;
+  }
+
+  ::selection {
+    background: #dce8dc;
+    color: #20352f;
+  }
+}
+
+@media (max-width: 639px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
